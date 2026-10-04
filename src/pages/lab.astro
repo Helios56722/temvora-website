@@ -2,29 +2,59 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Intro from '../components/Intro.astro';
 import Invitation from '../components/Invitation.astro';
+import Icon from '../components/Icon.astro';
 ---
-<PageLayout title="Product lab" description="A clear look at the practical software experiments being built alongside TemVora.">
+<PageLayout title="Product lab" description="Working software experiments from TemVora, with public source and clear limits.">
   <main id="main">
-    <Intro label="Product lab" title="Small tools. Real problems." copy="A public notebook for practical software experiments, what they can do today, and what still needs proof."/>
-    <section class="shell page-content content-split">
+    <Intro label="Product lab" title="Useful tools, built from real friction." copy="Working software experiments with a focused purpose, public source, and clear limits."/>
+
+    <section class="shell page-content product-ledger" aria-label="Current product experiments">
+      <article class="product-entry">
+        <div class="product-index" aria-hidden="true">01</div>
+        <div class="product-copy">
+          <p class="eyebrow">AI VIDEO / RELEASE QA</p>
+          <h2>FrameProof</h2>
+          <p class="lead">Catch likely release problems before an AI-generated video leaves your desk.</p>
+          <p>FrameProof samples a selected video in the browser and flags possible near-black frames, long low-motion runs, and repeated visuals for human review.</p>
+          <p>It can also summarize optional ComfyUI workflow JSON and export a plain evidence report. The source video is not uploaded by the current MVP.</p>
+          <a class="button" href="https://github.com/Helios56722/frameproof-ai-video-qa" target="_blank" rel="noopener">View FrameProof on GitHub <Icon name="diagonal" size={16}/></a>
+        </div>
+        <dl class="product-facts">
+          <div><dt>Status</dt><dd>Public validation MVP</dd></div>
+          <div><dt>Processing</dt><dd>Local browser checks</dd></div>
+          <div><dt>Does not judge</dt><dd>Story, identity, audio, or every frame</dd></div>
+        </dl>
+      </article>
+
+      <article class="product-entry product-entry-new">
+        <div class="product-index" aria-hidden="true">02</div>
+        <div class="product-copy">
+          <p class="eyebrow">EDUCATION / EVIDENCE WORKFLOW</p>
+          <h2>LabReceipt</h2>
+          <p class="lead">Match every lab requirement to clear screenshot evidence before you submit.</p>
+          <p>LabReceipt turns pasted assignment instructions into a checklist, then helps learners attach screenshots, write useful captions, find missing proof, and print a reviewable packet.</p>
+          <p>Screenshots stay in the active browser tab. An optional AI review checks typed requirements and captions only; it does not receive or verify the images.</p>
+          <a class="button" href="https://github.com/Helios56722/labreceipt" target="_blank" rel="noopener">View LabReceipt on GitHub <Icon name="diagonal" size={16}/></a>
+        </div>
+        <dl class="product-facts">
+          <div><dt>Status</dt><dd>Public MVP</dd></div>
+          <div><dt>Processing</dt><dd>Local screenshot workspace</dd></div>
+          <div><dt>Does not replace</dt><dd>Instructor review or grading</dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <section class="shell lab-principles content-split">
       <div>
-        <p class="eyebrow">CURRENT EXPERIMENT</p>
-        <h2>FrameProof</h2>
-        <p class="lead">A local-first release checker for AI-generated video.</p>
-        <p>FrameProof samples a selected video in the browser and highlights possible near-black frames, long low-motion runs, and repeated visuals before a human release review.</p>
-        <p>The current build also summarizes optional ComfyUI workflow JSON and exports a plain evidence report. The source video is not uploaded by this MVP.</p>
-        <a class="button" href="https://github.com/Helios56722/frameproof-ai-video-qa" target="_blank" rel="noopener">View the source on GitHub ↗</a>
-      </div>
-      <div>
-        <p class="eyebrow">STATUS / VALIDATION MVP</p>
+        <p class="eyebrow">THE STANDARD</p>
         <h2>Useful first.<br/><em>Honest always.</em></h2>
-        <p>FrameProof is a working experiment, not a finished commercial service. It does not judge story quality, identity, audio, lip sync, or every frame.</p>
-        <ol class="rule-list">
-          <li><span>01</span><div><h3>Screen locally.</h3><p>Run objective checks without a source-video upload.</p></div></li>
-          <li><span>02</span><div><h3>Review the evidence.</h3><p>Treat every warning as a prompt for a closer human check.</p></div></li>
-          <li><span>03</span><div><h3>Validate before selling.</h3><p>Customer interviews come before accounts, payments, and a public launch.</p></div></li>
-        </ol>
+        <p>Each product starts with a repeated problem, a narrow promise, and enough evidence to show what the current build can actually do.</p>
       </div>
+      <ol class="rule-list">
+        <li><span>01</span><div><h3>Keep the promise narrow.</h3><p>Describe the problem the current build handles without implying more.</p></div></li>
+        <li><span>02</span><div><h3>Show the evidence.</h3><p>Publish the source, checks, and known limitations alongside the product.</p></div></li>
+        <li><span>03</span><div><h3>Validate before scaling.</h3><p>Customer conversations come before paid infrastructure and complicated growth work.</p></div></li>
+      </ol>
     </section>
     <Invitation/>
   </main>

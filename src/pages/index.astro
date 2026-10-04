@@ -1,4 +1,36 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';import SampleViewer from '../components/SampleViewer.astro';import Icon from '../components/Icon.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import SampleViewer from '../components/SampleViewer.astro';
+import Icon from '../components/Icon.astro';
 ---
-<PageLayout home title="Websites, documents & IT support"><main id="main" class="studio-home"><div class="studio-preface"><h1>Design, documents,<br/><em>and everyday IT.</em></h1><p class="home-service-note">For your business.<br/>For your next project.<br/>For the things that need fixing.</p><a href="/request/">Tell me what you need <Icon name="diagonal" size={17}/></a></div><SampleViewer/><section class="practice-note" aria-label="How I can help"><div class="practice-intro"><span aria-hidden="true">✦</span><p>Have something in mind?<br/>Let’s work through it.</p></div><p>I can help with websites and advertising, documents, and technical support at home or at work. Tell me what you need and I’ll follow up with the next steps.</p><div class="practice-links"><a href="/services/">Explore the services <Icon name="arrow" size={18}/></a><a href="/pricing/">Services & packages <Icon name="arrow" size={18}/></a><a href="/lab/">See what I’m building <Icon name="arrow" size={18}/></a><a href="/faq/">Before we start <Icon name="arrow" size={18}/></a></div></section></main></PageLayout>
+<PageLayout home title="Websites, documents & IT support">
+  <main id="main" class="studio-home">
+    <div class="studio-preface">
+      <h1>Websites, documents,<br/><em>and IT that feels clear.</em></h1>
+      <p class="home-service-note">For small businesses.<br/>For independent projects.<br/>For technology that gets in the way.</p>
+      <a href="/request/">Tell me what you need <Icon name="diagonal" size={17}/></a>
+    </div>
+    <SampleViewer/>
+    <section class="home-lab" aria-labelledby="home-lab-title">
+      <div>
+        <p class="eyebrow">BUILDING IN PUBLIC</p>
+        <h2 id="home-lab-title">Small tools for<br/><em>real workflow friction.</em></h2>
+      </div>
+      <p>TemVora’s product lab turns repeated problems into focused software. Each experiment has a clear purpose, public source, and honest limits.</p>
+      <div class="home-lab-links">
+        <a href="/lab/"><span><b>01</b> FrameProof</span><small>AI video release checks</small><Icon name="arrow" size={18}/></a>
+        <a href="/lab/"><span><b>02</b> LabReceipt</span><small>Lab screenshot evidence</small><Icon name="arrow" size={18}/></a>
+      </div>
+    </section>
+    <section class="practice-note" aria-label="How I can help">
+      <div class="practice-intro"><span aria-hidden="true">✦</span><p>Have something in mind?<br/>Let’s work through it.</p></div>
+      <p>I design websites, turn rough notes into usable documents, and solve everyday technical problems. Start with the outcome; I’ll help plan the next steps.</p>
+      <div class="practice-links">
+        <a href="/services/">Explore the services <Icon name="arrow" size={18}/></a>
+        <a href="/pricing/">Services & packages <Icon name="arrow" size={18}/></a>
+        <a href="/lab/">See what I’m building <Icon name="arrow" size={18}/></a>
+        <a href="/faq/">Before we start <Icon name="arrow" size={18}/></a>
+      </div>
+    </section>
+  </main>
+</PageLayout>

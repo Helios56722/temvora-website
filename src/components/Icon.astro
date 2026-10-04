@@ -1,0 +1,21 @@
+---
+const { name = 'arrow', size = 24 } = Astro.props;
+const paths = {
+arrow: 'M5 12h14M13 6l6 6-6 6',
+diagonal: 'M6 18 18 6M6 6h12v12',
+web: 'M3 4h18v16H3zM3 9h18M7 6.5h.01M10 6.5h.01M9 12l-3 2.5 3 2.5M15 12l3 2.5-3 2.5',
+systems: 'M9 9h6v6H9zM9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M6 6h12v12H6z',
+care: 'M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4ZM8 12l3 3 5-6',
+mail: 'M3 5h18v14H3zM3 6l9 7 9-7',
+clock: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 7v5l3 2',
+ticket: 'M3 5h18v5a2 2 0 0 0 0 4v5H3v-5a2 2 0 0 0 0-4V5ZM15 8v2M15 12v2M15 16v1',
+plus: 'M12 5v14M5 12h14',
+download: 'M12 3v12M7 10l5 5 5-5M4 17v4h16v-4',
+lock: 'M6 10h12v11H6zM8 10V6a4 4 0 0 1 8 0v4M12 14v3',
+check: 'M4 12l5 5L20 6',
+menu: 'M4 7h16M4 12h16M4 17h16',
+close: 'M6 6l12 12M18 6 6 18',
+sound: 'M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4'
+};
+---
+<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={paths[name] || paths.arrow}/></svg>

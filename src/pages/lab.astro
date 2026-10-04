@@ -1,0 +1,31 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Intro from '../components/Intro.astro';
+import Invitation from '../components/Invitation.astro';
+---
+<PageLayout title="Product lab" description="A clear look at the practical software experiments being built alongside TemVora.">
+  <main id="main">
+    <Intro label="Product lab" title="Small tools. Real problems." copy="A public notebook for practical software experiments, what they can do today, and what still needs proof."/>
+    <section class="shell page-content content-split">
+      <div>
+        <p class="eyebrow">CURRENT EXPERIMENT</p>
+        <h2>FrameProof</h2>
+        <p class="lead">A local-first release checker for AI-generated video.</p>
+        <p>FrameProof samples a selected video in the browser and highlights possible near-black frames, long low-motion runs, and repeated visuals before a human release review.</p>
+        <p>The current build also summarizes optional ComfyUI workflow JSON and exports a plain evidence report. The source video is not uploaded by this MVP.</p>
+        <a class="button" href="https://github.com/Helios56722/frameproof-ai-video-qa" target="_blank" rel="noopener">View the source on GitHub ↗</a>
+      </div>
+      <div>
+        <p class="eyebrow">STATUS / VALIDATION MVP</p>
+        <h2>Useful first.<br/><em>Honest always.</em></h2>
+        <p>FrameProof is a working experiment, not a finished commercial service. It does not judge story quality, identity, audio, lip sync, or every frame.</p>
+        <ol class="rule-list">
+          <li><span>01</span><div><h3>Screen locally.</h3><p>Run objective checks without a source-video upload.</p></div></li>
+          <li><span>02</span><div><h3>Review the evidence.</h3><p>Treat every warning as a prompt for a closer human check.</p></div></li>
+          <li><span>03</span><div><h3>Validate before selling.</h3><p>Customer interviews come before accounts, payments, and a public launch.</p></div></li>
+        </ol>
+      </div>
+    </section>
+    <Invitation/>
+  </main>
+</PageLayout>

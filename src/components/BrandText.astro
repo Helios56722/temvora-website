@@ -1,0 +1,6 @@
+---
+import Wordmark from './Wordmark.astro';
+const { text = '' } = Astro.props;
+const parts=String(text).split(/(TemVora)/gi);
+---
+{parts.map(part => /^TemVora$/i.test(part) ? <Wordmark inline/> : part)}

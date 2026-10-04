@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+.sites-runtime/
+.local/
+backups/
+qa/
+.task-tmp/
+.openai/
+legal/
+
+# Local Hive records and Windows launch helpers stay out of public GitHub history.
+ASSET_SOURCES.md
+FONT_SOURCES.json
+LAUNCH_STATUS.md
+LEGAL_REVIEW_*.md
+NAME_CHECK_*.md
+ONLINE_LAUNCH_PLAN.md
+PROJECT_LOG.md
+VERIFICATION.md
+Backup TemVora.ps1
+Backup TemVora.vbs
+Open TemVora.ps1
+Open TemVora.vbs
+Stop TemVora.vbs
+scripts/
+brand/business-card/tools/

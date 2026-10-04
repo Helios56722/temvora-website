@@ -1,0 +1,23 @@
+---
+import Wordmark from './Wordmark.astro';
+import Icon from './Icon.astro';
+const { portfolio=false }=Astro.props;
+---
+<section class:list={['studio-cover','sample-collection',{'collection-cover':portfolio}]} aria-label="Interactive sample websites" data-sample-viewer>
+<div class="cover-edge"><span class="cover-brand"><Wordmark inline/> <span>/ SAMPLE WEBSITES</span></span><span>EXPLORE A DESIGN</span></div>
+<div class="cover-body">
+<div class="artboard" id="sample-panel" role="tabpanel" aria-labelledby="after-tab" tabindex="0">
+<div class="live-sample"><div class="live-sample-bar"><span data-sample-name>After Hours / Listening room</span><a data-open-sample href="/samples/after-hours/" target="_blank" rel="noopener">Open full sample <Icon name="diagonal" size={14}/></a></div><iframe src="/samples/after-hours/" title="After Hours interactive website sample" loading="eager"></iframe></div>
+</div>
+<aside class="project-index">
+<div class="index-top"><span class="index-cross" aria-hidden="true">✦</span><span class="micro">A CLOSER LOOK</span><span class="index-seal" aria-hidden="true"><Icon name="web" size={21}/></span></div>
+<div class="concept-content"><p class="micro">SELECTED SAMPLE</p><h2 data-concept-title>After Hours</h2><p data-concept-copy>A listening room built around warm light and vinyl records. Browse the programme and try the table request.</p><dl class="concept-facts"><div><dt>BUSINESS TYPE</dt><dd data-concept-format>Hospitality / listening room</dd></div><div><dt>TRY IT</dt><dd data-concept-feature>Programme and table request</dd></div></dl><p class="concept-small">Scroll inside the sample to explore it, or open the full page.</p></div>
+<div class="index-action"><a href="/request/?sample=After%20Hours" class="index-button" data-inquiry-link><span>Discuss a website like this</span><Icon name="diagonal" size={19}/></a></div>
+<a class="index-consult" href="/pricing/">Need something else? <span>View services & packages ↗</span></a>
+</aside>
+</div>
+<div class="gallery-selector"><span class="gallery-label">CHOOSE<br/><b>A SAMPLE</b></span><div class="gallery-tabs" role="tablist" aria-label="Sample websites"><button id="after-tab" type="button" role="tab" aria-selected="true" aria-controls="sample-panel" data-view="after"><span>01</span><strong>After Hours</strong><small>Listening room</small></button><button id="form-tab" type="button" role="tab" aria-selected="false" aria-controls="sample-panel" tabindex="-1" data-view="form"><span>02</span><strong>FORM</strong><small>Architecture</small></button><button id="terra-tab" type="button" role="tab" aria-selected="false" aria-controls="sample-panel" tabindex="-1" data-view="terra"><span>03</span><strong>Terra</strong><small>Objects & commerce</small></button></div></div>
+<noscript><div class="viewer-fallback">Explore the full samples: <a href="/samples/after-hours/">After Hours</a><a href="/samples/forme/">FORM Architecture</a><a href="/samples/terra/">Terra</a></div></noscript>
+<p class="viewer-note">Fictional businesses, created to show different website styles. No orders or reservations are placed.</p>
+</section>
+<script is:inline src="/sample-viewer.js" defer></script>

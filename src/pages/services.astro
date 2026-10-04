@@ -1,0 +1,10 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Intro from '../components/Intro.astro';
+import Icon from '../components/Icon.astro';
+import Invitation from '../components/Invitation.astro';
+import { services } from '../data/services';
+---
+<PageLayout title="Services" description="Website design and advertising, document creation, and IT support for businesses and homes.">
+<main id="main"><Intro label="Services" title="Design, documents, and IT support." copy="Help with a new project or something that needs fixing. Tell me what you need, and I’ll confirm the scope with you."/>
+<div class="shell page-content">{services.map(service=><section class="detail-section" id={service.id}><div><p class="eyebrow">{service.number} / {service.name.toUpperCase()}</p><h2>{service.title}</h2><p>{service.detail}</p></div><div><ul>{service.items.map(item=><li>{item}</li>)}</ul><a class="text-link" href={'/request/?intent='+service.id}>Ask about this service <Icon name="diagonal" size={18}/></a></div></section>)}</div><Invitation/></main></PageLayout>

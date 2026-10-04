@@ -1,0 +1,12 @@
+(() => {
+const root=document.querySelector('[data-sample-viewer]');if(!root)return;
+const samples=new Map([
+ ['after',{name:'After Hours',path:'/samples/after-hours/',key:'After Hours',copy:'A listening room built around warm light and vinyl records. Browse the programme and try the table request.',format:'Hospitality / listening room',feature:'Programme and table request'}],
+ ['form',{name:'FORM Architecture',path:'/samples/forme/',key:'Form',copy:'An architecture portfolio with space to look at the work. Open the featured project for a closer look at the design.',format:'Architecture / portfolio',feature:'Project image and detail panel'}],
+ ['terra',{name:'Terra Objects',path:'/samples/terra/',key:'Terra',copy:'A ceramics collection with a simple shopping experience. Browse the objects and try adding one to the sample bag.',format:'Retail / online shop',feature:'Products and shopping bag'}]
+]);
+const panel=root.querySelector('[role=tabpanel]'),frame=root.querySelector('iframe'),tabs=[...root.querySelectorAll('[role=tab]')];let selected='after';
+function selectView(key){const sample=samples.get(key);if(!sample)return;const tab=tabs.find(t=>t.dataset.view===key);tabs.forEach(t=>{const active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;});panel.setAttribute('aria-labelledby',tab.id);if(key!==selected)frame.src=sample.path;selected=key;frame.title=sample.name+' interactive website sample';root.querySelector('[data-sample-name]').textContent=sample.name+' / SAMPLE WEBSITE';root.querySelector('[data-open-sample]').href=sample.path;root.querySelector('[data-concept-title]').textContent=sample.name;root.querySelector('[data-concept-copy]').textContent=sample.copy;root.querySelector('[data-concept-format]').textContent=sample.format;root.querySelector('[data-concept-feature]').textContent=sample.feature;root.querySelector('[data-inquiry-link]').href='/request/?sample='+encodeURIComponent(sample.key);}
+tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectView(tab.dataset.view));tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(i+1)%tabs.length;if(event.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;if(next!==undefined){event.preventDefault();tabs[next].focus();selectView(tabs[next].dataset.view);}});});
+const query=new URLSearchParams(location.search).get('view');selectView(query==='forme'?'form':query||'after');
+})();

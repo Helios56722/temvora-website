@@ -1,0 +1,5 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';import Intro from '../components/Intro.astro';import Icon from '../components/Icon.astro';
+const entries=[['PLANNING','A useful website brief starts with a purpose.','A short guide to the decisions that help a website project begin.','website-brief'],['SUPPORT','Help me see what you’re seeing.','How to describe a technical issue so the first conversation is useful.','support-request'],['OWNERSHIP','Know what belongs to your business.','A practical list of the website accounts and responsibilities to keep track of.','ownership']];
+---
+<PageLayout title="Journal & resources"><main id="main"><Intro label="Journal / resources" title="A little clarity goes a long way." copy="Useful starting points for your website and the technology around it."/><section class="shell page-content journal-list">{entries.map(([label,title,copy,slug])=><article><p class="eyebrow">{label} / A SHORT READ</p><h2><a href={'/resources/'+slug+'/'}>{title}</a></h2><p>{copy}</p><a class="text-link" href={'/resources/'+slug+'/'}>Read the guide <Icon name="arrow" size={18}/></a></article>)}</section></main></PageLayout>

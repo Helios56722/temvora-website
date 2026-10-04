@@ -1,0 +1,5 @@
+---
+import BrandText from './BrandText.astro';
+const { label, title, copy }=Astro.props;
+---
+<section class="page-intro shell"><div class="breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span><BrandText text={label}/></span></div><p class="eyebrow"><BrandText text={label.toUpperCase()}/></p><h1><BrandText text={title}/></h1>{copy && <p><BrandText text={copy}/></p>}</section>

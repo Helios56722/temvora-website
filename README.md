@@ -28,7 +28,7 @@ npm run build
 - Responsive navigation and original interactive sample sites
 - Project, support, and consultation request forms
 - Plain-text download, clipboard copy, email-app, and Gmail handoff options
-- A Product Lab page for early tools such as FrameProof and AcceptPath
+- A Product Lab page for early tools such as FrameProof and Bookmoth
 - Branded business-card proofs and print assets
 
 The request forms do not send automatically or store submissions. Visitors choose whether to copy, download, or open a message in their own email client. The public review is intentionally marked `noindex` while the business and service setup is still being finalized.

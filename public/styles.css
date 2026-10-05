@@ -98,6 +98,7 @@ body{font-optical-sizing:auto;word-spacing:normal;text-size-adjust:100%}
 .product-facts>div{padding:18px 0;border-bottom:1px solid var(--line)}
 .product-facts dt{font:12px/1.5 var(--mono);color:var(--text-label);margin-bottom:7px;text-transform:uppercase}
 .product-facts dd{margin:0;font:16px/1.55 var(--ui);color:var(--text-body)}
+.product-mark-card dd{margin-top:12px}.product-mark-card img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:22%;background:#f5ead2}
 .product-entry-new .product-index{border-color:#d94ddb;color:#f4c1f0;box-shadow:0 0 28px #d94ddb22}
 .lab-principles{padding-block:50px 80px}
 .lab-principles>div>p:last-child{font-size:21px;line-height:1.55;color:var(--text-body)}

@@ -14,14 +14,14 @@ import Icon from '../components/Icon.astro';
         <div class="product-copy">
           <p class="eyebrow">AI VIDEO / RELEASE QA</p>
           <h2>FrameProof</h2>
-          <p class="lead">Catch likely release problems before an AI-generated video leaves your desk.</p>
-          <p>FrameProof samples a selected video in the browser and flags possible near-black frames, long low-motion runs, and repeated visuals for human review.</p>
-          <p>It can also summarize optional ComfyUI workflow JSON and export a plain evidence report. The source video is not uploaded by the current MVP.</p>
+          <p class="lead">Run a graph autopsy before a ComfyUI workflow reaches production.</p>
+          <p>FrameProof parses workflow JSON deterministically, builds a fault atlas, and ties every finding to affected nodes, file evidence, impact, and a concrete repair.</p>
+          <p>Its browser video check can also flag possible near-black frames, low-motion runs, and repeated visuals for human review. Static file evidence stays separate from runtime claims, and the source video is not uploaded by the current MVP.</p>
           <a class="button" href="https://github.com/Helios56722/frameproof-ai-video-qa" target="_blank" rel="noopener">View FrameProof on GitHub <Icon name="diagonal" size={16}/></a>
         </div>
         <dl class="product-facts">
-          <div><dt>Status</dt><dd>Public validation MVP</dd></div>
-          <div><dt>Processing</dt><dd>Local browser checks</dd></div>
+          <div><dt>Status</dt><dd>Deterministic validation MVP</dd></div>
+          <div><dt>Core</dt><dd>Graph autopsy and fault atlas</dd></div>
           <div><dt>Does not judge</dt><dd>Story, identity, audio, or every frame</dd></div>
         </dl>
       </article>
@@ -33,13 +33,14 @@ import Icon from '../components/Icon.astro';
           <h2>Bookmoth</h2>
           <p class="lead">Turn screenshots into study material you can trace back to the source.</p>
           <p>Bookmoth helps students, hobby learners, and people building a new skill transform permitted notes, lessons, diagrams, and tutorials into a study guide, report, practice set, or visual collage.</p>
-          <p>Every useful item points back to a source image. Unclear text and low-confidence extraction stay visible for review. The current release is a responsive web app; camera capture, share-sheet intake, and offline review remain on the mobile roadmap.</p>
+          <p>Every useful item points back to a source image. The Lantern trail maps connections, blind spots, and a recall loop instead of returning a generic summary. Unclear text and low-confidence extraction stay visible for review.</p>
+          <p>The current release is a responsive web app; camera capture, share-sheet intake, and offline review remain on the mobile roadmap.</p>
           <a class="button" href="https://github.com/Helios56722/bookmoth" target="_blank" rel="noopener">View Bookmoth on GitHub <Icon name="diagonal" size={16}/></a>
         </div>
         <dl class="product-facts bookmoth-facts">
-          <div class="product-mark-card"><dt>Brand figure</dt><dd><img src="/brand/bookmoth-figure.png" alt="A violet and amber moth hovering above an open book" loading="lazy" width="1024" height="1024"/></dd></div>
+          <div class="product-mark-card"><dt>Brand figure</dt><dd><img src="/brand/bookmoth-figure.png" alt="A violet and amber moth hovering above an open book" loading="eager" width="1024" height="1024"/></dd></div>
           <div><dt>Status</dt><dd>Open-source working MVP</dd></div>
-          <div><dt>Output</dt><dd>Guide, report, practice, collage, and source check</dd></div>
+          <div><dt>Output</dt><dd>Lantern trail, guide, report, practice, collage, and source check</dd></div>
           <div><dt>Does not replace</dt><dd>The original source or the learner’s judgment</dd></div>
         </dl>
       </article>
